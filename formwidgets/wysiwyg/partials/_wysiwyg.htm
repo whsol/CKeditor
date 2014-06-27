@@ -1,0 +1,9 @@
+<div data-control="wysiwyg">
+ 	<textarea name="<?= $name ?>" id="<?= $this->getId('textarea') ?>"><?= e($value) ?></textarea>
+</div>
+
+<script type="text/javascript">
+$( document ).ready( function() {
+	$( '[data-control="wysiwyg"] textarea' ).ckeditor();
+} );
+</script>
