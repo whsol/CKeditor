@@ -32,11 +32,4 @@ class Plugin extends PluginBase
             ]
         ];
     }
-public function boot()
-{
-    Event::listen('backend.form.extendFields', function($form) {
-        // Only apply changes to Cms\Classes\Content form
-  return 'ss';
-    });
-}
 }
