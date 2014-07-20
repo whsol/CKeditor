@@ -1,0 +1,6 @@
+fields:
+  show_cms_content_as_wysiwyg:
+    label: Use CKEditor for CMS - Content?
+    type: checkbox
+    comment: If checked, CMS - Content entries will use the CKEditor.
+    default: false
