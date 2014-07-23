@@ -1,7 +1,7 @@
 <?php namespace ShahiemSeymor\Ckeditor\FormWidgets;
 
 use Backend\Classes\FormWidgetBase;
-
+use ShahiemSeymor\Ckeditor\Models\Settings;
 class Wysiwyg extends FormWidgetBase
 {
 
@@ -23,6 +23,8 @@ class Wysiwyg extends FormWidgetBase
     {
          $this->vars['name'] = $this->formField->getName();
          $this->vars['value'] = $this->model->{$this->columnName};
+         $this->vars['up_public'] = Settings::instance()->up_public;
+   
     }
 
     public function loadAssets()
@@ -30,6 +32,5 @@ class Wysiwyg extends FormWidgetBase
         $this->addJs('ckeditor/ckeditor.js');
         $this->addJs('ckeditor/adapters/jquery.js');  
     }
-
 
 }

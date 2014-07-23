@@ -1,6 +1,11 @@
 fields:
+  up_public:
+    label: Public key (Uploadcare)
+    type: text
+    comment: With Uploadcare users can upload photos directly from Facebook or Instagram and documents from Dropbox and Google Drive.
+
   show_cms_content_as_wysiwyg:
-    label: Use CKEditor for CMS - Content?
+    label: Use CKEditor for CMS / RainLab Blog - Content?
     type: checkbox
-    comment: If checked, CMS - Content entries will use the CKEditor.
+    comment: If checked, CMS - Content &amp; RainLab Blog Content entries will use the CKEditor.
     default: false

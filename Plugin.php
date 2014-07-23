@@ -49,14 +49,13 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        if ( Settings::get('show_cms_content_as_wysiwyg', false) )
+        if (Settings::get('show_cms_content_as_wysiwyg', false))
         {
             Event::listen('backend.form.extendFields', function($form) {
                 // Only apply changes to Cms\Classes\Content form
-                if ( empty($form->config->model) ||
-                     !is_object($form->config->model) ||
-                     get_class($form->config->model) != 'Cms\Classes\Content' )
-                    return;
+                if ( empty($form->config->model) || !is_object($form->config->model) || get_class($form->config->model) != 'Cms\Classes\Content' )
+    
+                return;
 
                 foreach ($form->allFields as $field )
                 {
