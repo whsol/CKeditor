@@ -54,10 +54,9 @@ class Plugin extends PluginBase
             Event::listen('backend.form.extendFields', function($form) {
                 // Only apply changes to Cms\Classes\Content form
                 if ( empty($form->config->model) || !is_object($form->config->model) || get_class($form->config->model) != 'Cms\Classes\Content' )
-    
-                return;
+                    return;
 
-                foreach ($form->allFields as $field )
+                foreach ($form->getFields() as $field )
                 {
                     // Only apply changes to codeeditor fields
                     if ( empty($field->config['type']) || $field->config['type'] != 'codeeditor' )
