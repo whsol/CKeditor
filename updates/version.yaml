@@ -7,3 +7,5 @@
 1.0.4:
     - Added file browser (Upload care) 
     - Added setting field for public key
+1.0.5:
+    - Error fixed by content and added skin.js file
