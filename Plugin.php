@@ -30,6 +30,11 @@ class Plugin extends PluginBase
             'ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg' => [
                 'label' => 'Wysiwyg',
                 'alias' => 'wysiwyg'
+            ],
+            ,
+            'ShahiemSeymor\Ckeditor\FormWidgets\TWysiwyg' => [
+                'label' => 'TWysiwyg',
+                'alias' => 'twysiwyg'
             ]
         ];
     }
