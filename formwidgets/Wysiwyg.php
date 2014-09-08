@@ -24,13 +24,13 @@ class Wysiwyg extends FormWidgetBase
          $this->vars['name'] = $this->formField->getName();
          $this->vars['value'] = $this->model->{$this->columnName};
          $this->vars['up_public'] = Settings::instance()->up_public;
-   
+
     }
 
     public function loadAssets()
     {
-        $this->addJs('ckeditor/ckeditor.js');
-        $this->addJs('ckeditor/adapters/jquery.js');  
+        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/assets/ckeditor/ckeditor.js', 'ShahiemSeymor.Ckeditor');
+        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/assets/ckeditor/adapters/jquery.js', 'ShahiemSeymor.Ckeditor');
     }
 
 }
